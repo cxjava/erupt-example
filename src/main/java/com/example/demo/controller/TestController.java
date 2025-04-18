@@ -1,11 +1,11 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.Article;
+import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.erupt.jpa.dao.EruptDao;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 @RestController

@@ -1,5 +1,6 @@
 package com.example.demo.model.blog;
 
+import jakarta.annotation.Resource;
 import xyz.erupt.annotation.Erupt;
 import xyz.erupt.annotation.EruptField;
 import xyz.erupt.annotation.fun.DataProxy;
@@ -13,12 +14,11 @@ import xyz.erupt.annotation.sub_field.sub_edit.Search;
 import xyz.erupt.core.prop.EruptProp;
 import xyz.erupt.upms.model.base.HyperModel;
 
-import javax.annotation.Resource;
 import javax.imageio.ImageIO;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
