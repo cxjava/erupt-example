@@ -1,14 +1,15 @@
 package com.example.demo;
 
 import com.example.demo.model.Article;
+import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import xyz.erupt.jpa.dao.EruptDao;
 
-import javax.annotation.Resource;
 import java.util.List;
+import xyz.erupt.upms.model.EruptRole;
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ExampleApplicationTests {
 
 
@@ -18,10 +19,9 @@ class ExampleApplicationTests {
     //查询
     @Test
     public void query() {
-        List<Article> articles = eruptDao.lambdaQuery(Article.class)
-                .eq(Article::getTopUp, false).list();
+        List<EruptRole> articles = eruptDao.lambdaQuery(EruptRole.class)
+                .eq(EruptRole::getStatus, false).list();
         System.out.println(articles);
     }
-
 
 }
